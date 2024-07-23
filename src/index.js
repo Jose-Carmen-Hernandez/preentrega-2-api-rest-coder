@@ -34,11 +34,34 @@ const httpServer = app.listen(PORT, () => {
 export const socketServer = new Server(httpServer);
 socketServer.on("connection", async (socket) => {
   console.log("Nuevo cliente conectado. Id: " + socket.id);
-  const productsList = await productManager.getAllProducts();
-  socket.emit("home", productsList);
-  socket.emit("realtime", productsList);
-  socket.on("nuevo-producto", async (producto) => {
-    await productManager.addProduct(producto);
+
+  try {
+    const productsList = await productManager.getAllProducts();
+    socket.emit("home", productsList);
     socket.emit("realtime", productsList);
+  } catch (error) {
+    console.error("Error al obtener la lista de productos", error);
+  }
+
+  socket.on("nuevo-producto", async (producto) => {
+    try {
+      await productManager.addProduct(producto);
+      //despues de agregar un producto, obtener la lista actualizada antes de emitirla a todos los clientes:
+      const updatedProductsList = await productManager.getAllProducts();
+      socketServer.emit("realtime", updatedProductsList);
+    } catch (error) {
+      console.error("Error al agregar el producto", error);
+    }
+  });
+
+  socket.on("eliminar-producto", async (productId) => {
+    try {
+      await productManager.deleteProduct(productId);
+      //despues de eliminar un producto, obtener la lista actualizada antes de emitirla a todos los clientes:
+      const updatedProductsList = await productManager.getAllProducts();
+      socketServer.emit("realtime", updatedProductsList);
+    } catch (error) {
+      console.error("Error al eliminar el producto", error);
+    }
   });
 });

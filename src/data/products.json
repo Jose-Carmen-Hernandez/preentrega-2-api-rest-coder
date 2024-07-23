@@ -1,1 +1,82 @@
-{"products":[{"title":"producto 1","description":"zapatos talla 9","code":"fg5147g","price":900,"status":true,"stock":41,"category":"calzado","id":1},{"title":"producto 2","description":"zapatos talla 7","code":"kjl425","price":2250,"status":true,"stock":85,"category":"calzado","id":2},{"title":"producto 3","description":"remera talla 5","code":"kjl425","price":1250,"status":true,"stock":50,"category":"remeras","id":3},{"title":"producto 4","description":"pantalon talla 9","code":"kjh585","price":2187,"status":true,"stock":85,"category":"pantalones","id":4},{"title":"producto 5","description":"remera talla 9","code":"rd125","price":1300,"status":true,"stock":29,"category":"remeras","id":5},{"title":"producto 6","description":"pantalon talla 5","code":"pd325","price":2300,"status":true,"stock":77,"category":"pantalones","id":6},{"title":"sonaja","description":"cascabel fino","price":"458","code":"son45","stock":"32","category":"bebés ","id":7}]}
+{
+  "products": [
+    {
+      "title": "producto 1",
+      "description": "zapatos talla 9",
+      "code": "fg5147g",
+      "price": 900,
+      "status": true,
+      "stock": 41,
+      "category": "calzado",
+      "id": 1
+    },
+    {
+      "title": "producto 2",
+      "description": "zapatos talla 7",
+      "code": "kjl425",
+      "price": 2250,
+      "status": true,
+      "stock": 85,
+      "category": "calzado",
+      "id": 2
+    },
+    {
+      "title": "producto 3",
+      "description": "remera talla 5",
+      "code": "kjl425",
+      "price": 1250,
+      "status": true,
+      "stock": 50,
+      "category": "remeras",
+      "id": 3
+    },
+    {
+      "title": "producto 4",
+      "description": "pantalon talla 9",
+      "code": "kjh585",
+      "price": 2187,
+      "status": true,
+      "stock": 85,
+      "category": "pantalones",
+      "id": 4
+    },
+    {
+      "title": "producto 5",
+      "description": "remera talla 9",
+      "code": "rd125",
+      "price": 1300,
+      "status": true,
+      "stock": 29,
+      "category": "remeras",
+      "id": 5
+    },
+    {
+      "title": "producto 6",
+      "description": "pantalon talla 5",
+      "code": "pd325",
+      "price": 2300,
+      "status": true,
+      "stock": 77,
+      "category": "pantalones",
+      "id": 6
+    },
+    {
+      "title": "sonaja",
+      "description": "cascabel fino",
+      "price": "458",
+      "code": "son45",
+      "stock": "32",
+      "category": "bebés ",
+      "id": 7
+    },
+    {
+      "title": "bufanda",
+      "description": "Material: lana. Largo: 1.5 metros, Ancho: 20 cm",
+      "price": "452",
+      "code": "bfla123",
+      "stock": "23",
+      "category": "Ropa de invierno",
+      "id": 8
+    }
+  ]
+}

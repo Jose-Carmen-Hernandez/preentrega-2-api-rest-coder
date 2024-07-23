@@ -9,7 +9,11 @@ class ProductManager {
   async setNewId() {
     try {
       await this.getAllProducts();
-      return this.productsList.length + 1;
+      if (this.productsList.length === 0) {
+        return 1;
+      }
+      const lastProduct = this.productsList[this.productsList.length - 1];
+      return lastProduct.id + 1;
     } catch (error) {
       console.error("Error al obtener el nuevo ID", error);
     }
